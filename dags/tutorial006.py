@@ -45,12 +45,3 @@ def test_006():
 
 
 test_dag006 = test_006()
-
-dag = DAG("test_006_01", start_date=pendulum.datetime(
-    2021, 1, 1, tz="UTC"), catchup=False, tags=['hzh-test'], template_searchpath="/opt")
-t2 = BashOperator(
-    task_id="BashOperator005",
-    # "test.sh" is a file under "/opt/scripts"
-    bash_command="test.sh",
-    dag=dag,
-)

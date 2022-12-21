@@ -8,6 +8,9 @@ pipeline {
                 sh """
                     echo asdfadsfasdf
                     pwd
+                    cd dags
+                    mkdir sandbox
+                    ls
                 """
             }
 

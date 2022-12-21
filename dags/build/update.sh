@@ -25,10 +25,11 @@ for FILE in tmp/*.py
     sed -i "${line}i \    $ownerStr" $FILE
 done
 
-zip -r sandbox.zip ./tmp/*.py
-ls
-
-rm -rf tmp
+cd tmp
+zip -r sandbox.zip ./*.py
 ls
 
 gsutil cp -r sandbox.zip gs://asia-northeast1-hzh-compose-420191cc-bucket/dags/
+
+rm -rf ../tmp
+ls

@@ -5,7 +5,7 @@ pipeline {
         stage('modify dags') {
             steps {
 
-                sh """
+                sh '''
                     #!/bin/bash
                     echo asdfadsfasdf
                     pwd
@@ -32,7 +32,7 @@ pipeline {
                         echo $ownerStr
                         sed -i "${line}i \    $ownerStr" $FILE
                     done
-                """
+                '''
             }
 
         }

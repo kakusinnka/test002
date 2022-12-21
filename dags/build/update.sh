@@ -20,7 +20,7 @@ for FILE in tmp/*.py
     line=$(sed -n '/default_args/=' $FILE)
     ((line++))
     echo $line
-    ownerStr="'owner': 'max',"
+    ownerStr="'owner': 'sandbox',"
     echo $ownerStr
     sed -i "${line}i \    $ownerStr" $FILE
 done
@@ -30,3 +30,5 @@ ls
 
 rm -rf tmp
 ls
+
+gsutil cp gs://asia-northeast1-hzh-compose-420191cc-bucket/dags sandbox.zip

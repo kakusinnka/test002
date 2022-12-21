@@ -31,4 +31,4 @@ ls
 rm -rf tmp
 ls
 
-gsutil cp gs://asia-northeast1-hzh-compose-420191cc-bucket/dags sandbox.zip
+gsutil cp gs://asia-northeast1-hzh-compose-420191cc-bucket/dags ./sandbox.zip

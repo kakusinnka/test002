@@ -5,7 +5,7 @@ pipeline {
         stage('modify dags') {
             steps {
                 dir ('dags') {
-                    sh('update.sh')
+                    sh('./update.sh')
                 }
             }
 

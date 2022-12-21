@@ -1,19 +1,7 @@
 #!/bin/bash
-
-if [ -e tmp ]
-then
-rm -rf tmp
-mkdir tmp
-chmod 777 tmp
-echo '已删除并重新创建 tmp 目录'
-else
-mkdir tmp
-chmod 777 tmp
-echo 'tmp 目录不存在，已创建'
-fi
-
-echo start 
+echo start...
 pwd
+mkdir tmp
 ls
 cp -r *.py tmp/
 ls tmp/
@@ -39,4 +27,6 @@ done
 
 zip -r sandbox.zip ./tmp/*.py
 ls
+
 rm -rf tmp
+ls

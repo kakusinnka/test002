@@ -5,15 +5,6 @@ pipeline {
         stage('modify dags') {
             steps {
                 dir ('dags') {
-                    sh '''
-                        #!/bin/bash
-                        echo start 
-                        pwd
-                        mkdir tmp
-                        ls
-                        cp -r *.py tmp/
-                        ls tmp/
-                    '''
                     sh('update.sh')
                 }
             }

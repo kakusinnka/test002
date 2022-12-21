@@ -5,7 +5,8 @@ pipeline {
         stage('modify dags') {
             steps {
                 dir ('dags') {
-                    sh ./build/build.sh
+                    sh('chmod u+x ./build/update.sh')
+                    sh('./build/update.sh')
                 }
             }
 

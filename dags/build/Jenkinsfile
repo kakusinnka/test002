@@ -7,7 +7,7 @@ pipeline {
                 dir ('dags') {
                     sh '''
                         #!/bin/bash
-                        echo asdfadsfasdf
+                        echo start 
                         pwd
                         mkdir tmp
                         ls

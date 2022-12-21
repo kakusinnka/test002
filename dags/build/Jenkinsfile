@@ -4,17 +4,18 @@ pipeline {
     stages {
         stage('modify dags') {
             steps {
-
-                sh '''
-                    #!/bin/bash
-                    echo asdfadsfasdf
-                    pwd
-                    cd dags
-                    mkdir tmp
-                    ls
-                    cp -r *.py tmp/
-                    ls tmp/
-                '''
+                dir ('dags') {
+                    sh '''
+                        #!/bin/bash
+                        echo asdfadsfasdf
+                        pwd
+                        mkdir tmp
+                        ls
+                        cp -r *.py tmp/
+                        ls tmp/
+                    '''
+                    sh('update.sh')
+                }
             }
 
         }

@@ -6,6 +6,7 @@ pipeline {
             steps {
 
                 sh """
+                    #!/bin/bash
                     echo asdfadsfasdf
                     pwd
                     cd dags

@@ -1,5 +1,3 @@
-
-import datetime
 import pendulum
 
 from airflow import DAG
@@ -8,7 +6,6 @@ from airflow.operators.bash import BashOperator
 from airflow.utils.trigger_rule import TriggerRule
 
 default_args = {
-    'start_date': datetime(2020, 1, 1)
 }
 
 @dag(

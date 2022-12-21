@@ -23,9 +23,8 @@ pipeline {
                         echo $oldDagIdStr
                         newDagIdStr=${oldDagIdStr%(*}"_sandbox()"
                         echo $newDagIdStr
-                        sed -i "s/$oldDagIdStr/$newDagIdStr/" $FILE
-                    
-                    
+                        sudo sed -i "s/$oldDagIdStr/$newDagIdStr/" $FILE
+
                         line=$(sed -n '/default_args/=' $FILE)
                         ((line++))
                         echo $line

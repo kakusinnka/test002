@@ -36,3 +36,7 @@ for FILE in tmp/*.py
     echo $ownerStr
     sed -i "${line}i \    $ownerStr" $FILE
 done
+
+zip -r sandbox.zip ./tmp/*.py
+ls
+rm -rf tmp

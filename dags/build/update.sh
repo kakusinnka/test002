@@ -1,7 +1,6 @@
 #!/bin/bash
-start_date=$1
-echo $start_date
 echo start...
+echo $start_date
 pwd
 mkdir tmp
 ls
@@ -26,7 +25,7 @@ for FILE in tmp/*.py
     echo $ownerStr
     sed -i "${line}i \    $ownerStr" $FILE
 
-    sed -i '/    start_date/c\    start_date=pendulum.datetime($start_date tz="Asia/Tokyo"),' $FILE
+    sed -i '/    start_date/c\    start_date=pendulum.datetime(${start_date} tz="Asia/Tokyo"),' $FILE
 done
 
 cd tmp

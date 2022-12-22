@@ -23,6 +23,8 @@ for FILE in tmp/*.py
     ownerStr="'owner': 'sandbox',"
     echo $ownerStr
     sed -i "${line}i \    $ownerStr" $FILE
+
+    sed -i '/    start_date/c\    start_date=pendulum.datetime($start_date tz="Asia/Tokyo"),'
 done
 
 cd tmp

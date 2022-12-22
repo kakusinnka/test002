@@ -5,8 +5,9 @@ pipeline {
         stage('modify dags') {
             steps {
                 dir ('dags') {
+                    sh "echo ${start_date}"
                     sh('chmod u+x ./build/update.sh')
-                    sh('./build/update.sh params.start_date')
+                    sh('./build/update.sh ${start_date}')
                 }
             }
 

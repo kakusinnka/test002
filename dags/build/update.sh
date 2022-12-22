@@ -25,7 +25,7 @@ for FILE in tmp/*.py
     echo $ownerStr
     sed -i "${line}i \    $ownerStr" $FILE
 
-    sed -i '/    start_date/c\    start_date=pendulum.datetime(${start_date} tz="Asia/Tokyo"),' $FILE
+    sed -i "/    start_date/c\    start_date=pendulum.datetime($start_date tz=\"Asia/Tokyo\")," $FILE
 done
 
 cd tmp

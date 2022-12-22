@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir ('dags') {
                     sh('chmod u+x ./build/update.sh')
-                    sh('./build/update.sh')
+                    sh('./build/update.sh params.start_date')
                 }
             }
 

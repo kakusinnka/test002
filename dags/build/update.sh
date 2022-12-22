@@ -1,6 +1,6 @@
 #!/bin/bash
 start_date=$1
-echo start_date
+echo $start_date
 echo start...
 pwd
 mkdir tmp
